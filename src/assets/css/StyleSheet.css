@@ -1,0 +1,15 @@
+html,
+body {
+  height: 100%;
+  /* background-color: #333; */
+  color: #333;
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+.cover-body {
+  /* padding-left: 60px;
+  padding-right: 60px; */
+}
