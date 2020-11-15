@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Avatar from "./Avatar3";
+import Avatar from "./Avatar4";
 
 const Styles = styled.div`
   .wrapper {

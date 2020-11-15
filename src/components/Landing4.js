@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import { Jumbotron as Jumbo, Container } from "react-bootstrap";
-import Teamwork from "../assets/images/teamwork.png";
+import LandingBackground from "../assets/images/landingbackground.png";
 import DownArrow from "../assets/images/down_arrow.png";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
 const Styles = styled.div`
   .jumbo {
-    background: url(${Teamwork}) no-repeat fixed;
+    background: url(${LandingBackground}) no-repeat fixed;
     background-size: cover;
     color: #ccc;
     height: 100vh;
@@ -223,7 +222,7 @@ class Landing extends Component {
     return (
       <Styles>
         <div className="jumbo">
-          <div className="overlay" align="center" />
+          <div align="center" />
           <div className="title-div">
             <div className="title">
               <h1>Jerome Lieow</h1>
