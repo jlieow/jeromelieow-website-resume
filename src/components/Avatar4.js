@@ -5,6 +5,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Resume from "../assets/documents/resume.pdf";
 
 const Styles = styled.div`
   .row {
@@ -300,8 +301,8 @@ class Avatar extends Component {
                         }}
                       >
                         <a
-                          href="/text.txt"
-                          download
+                          href={Resume}
+                          download="jeromelieow-resume.pdf"
                           style={{ textDecoration: "none" }}
                         >
                           <Button
