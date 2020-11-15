@@ -212,7 +212,7 @@ class Avatar extends Component {
     // const contentAboutMe =
     //   "An Avionics Engineer with a love for developing useful software. With a track record of building and delivering solutions while collaborating across multidiscplinary domains.\n\nCurrently with the Republic of Singapore Air Force.";
     const contentAboutMe =
-      "I am Jerome, an avionics engineer in Singapore currently with the Republic of Singapore Air Force.\n\nI like going to the gym, travelling, investing, exploring new languages and building software.";
+      "I am Jerome, an avionics engineer in Singapore currently with the Republic of Singapore Air Force.\n\nI like going to the gym, travelling, investing, building software and learning new things.";
 
     return (
       <MuiThemeProvider theme={theme}>
