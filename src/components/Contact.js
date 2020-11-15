@@ -29,15 +29,15 @@ class Contact extends Component {
         src: Facebook,
       },
       {
-        link: "https://www.linkedin.com/in/jeromelieow/",
+        link: "https://www.instagram.com/jeromelieow/",
         src: Instagram,
       },
       {
-        link: "https://www.linkedin.com/in/jeromelieow/",
+        link: "mailto:jeromelieow@gmail.com",
         src: Email,
       },
       {
-        link: "https://www.linkedin.com/in/jeromelieow/",
+        link: "https://github.com/jlieow",
         src: Github,
       },
     ],
