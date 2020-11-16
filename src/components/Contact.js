@@ -81,7 +81,13 @@ class Contact extends Component {
             </table>
           </div>
           <p style={{ margin: 0, paddingTOp: "20px", fontSize: "12px" }}>
-            <b>Built with React, sourcecode available on github.</b>
+            <b>
+              Built with React, sourcecode available on{" "}
+              <a href="https://github.com/jlieow/jeromelieow-website-resume">
+                GitHub
+              </a>
+              .
+            </b>
           </p>
         </div>
       </Styles>
