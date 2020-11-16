@@ -55,7 +55,7 @@ const Styles = styled.div`
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
     max-width: 25%;
-    min-width: 75px;
+    min-width: 50px;
     text-align: right;
     float: left;
   }
@@ -64,7 +64,7 @@ const Styles = styled.div`
     -ms-flex: 75%; /* IE10 */
     flex: 75%;
     max-width: 75%;
-    min-width: 300px;
+    min-width: 100px;
     text-align: left;
     float: left;
     padding: 20px;
@@ -152,7 +152,17 @@ class Projects extends Component {
             paddingBottom: "50px",
           }}
         >
-          <div data-aos="animateFadeInUp" data-aos-offset="300">
+          <div
+            data-aos="animateFadeInUp"
+            data-aos-offset="300"
+            style={
+              {
+                // border: "1px solid red",
+                // marginLeft: "75px",
+                // marginRight: "75px",
+              }
+            }
+          >
             <div
               style={{
                 textAlign: "center",
@@ -166,9 +176,9 @@ class Projects extends Component {
               <div
                 className="project-row"
                 style={{
-                  // border: "1px solid white",
-                  paddingLeft: "60px",
-                  paddingRight: "60px",
+                  // border: "1px solid black",
+                  marginLeft: "75px",
+                  marginRight: "75px",
                 }}
               >
                 {this.state.projects.map((project) => {
@@ -176,9 +186,11 @@ class Projects extends Component {
                     <div
                       key={project.projectTitle}
                       style={{
-                        // border: "1px solid black",
+                        // border: "1px solid blue",
                         display: "flex",
                         alignItems: "center",
+                        // marginRight: "60px",
+                        // marginLeft: "60px",
                       }}
                     >
                       <div className="column-img">
@@ -191,7 +203,7 @@ class Projects extends Component {
                       <div
                         className="column-details"
                         style={{
-                          // border: "1px solid black",
+                          // border: "1px solid red",
                           display: "flex",
                           alignItems: "center",
                         }}

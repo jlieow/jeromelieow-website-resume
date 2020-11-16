@@ -7,12 +7,25 @@ import { Link } from "react-scroll";
 const Styles = styled.div`
   .jumbo {
     background: url(${LandingBackground}) no-repeat fixed;
-    background-size: cover;
+    background-size: 100% 100%;
     color: #ccc;
     height: 100vh;
     min-height: 400px;
     position: relative;
     z-index: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .jumbo {
+      background: url(${LandingBackground}) no-repeat scroll;
+      background-size: 160% 130%;
+      background-position: 100% 100%; 
+      color: #ccc;
+      height: 100vh;
+      min-height: 400px;
+      position: relative;
+      z-index: 0;
+    }
   }
 
   .overlay {
@@ -38,8 +51,8 @@ const Styles = styled.div`
   .title {
     z-index: 2;
     position: relative;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
   }
 
   .title p {
