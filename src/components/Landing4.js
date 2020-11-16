@@ -228,6 +228,43 @@ const Styles = styled.div`
       padding-right: 40px;
     }
   }
+
+  interests::before { 
+    content: "Software"; 
+  
+    animation-duration: 3s;
+    animation-name: animate;
+    animation-iteration-count: infinite;    
+  } 
+
+  @keyframes animate { 
+    0% { 
+      content: "Software"; 
+    } 
+    25% { 
+      content: "Travelling"; 
+    } 
+    50% { 
+      content: "Investing"; 
+    } 
+    75% { 
+      content: "Learning"; 
+    } 
+
+  @-webkit-keyframes animate { 
+    0% { 
+      content: "Travelling"; 
+    } 
+    25% { 
+      content: "Software"; 
+    } 
+    50% { 
+      content: "Investing"; 
+    } 
+    75% { 
+      content: "Learning"; 
+    } 
+} 
 `;
 
 class Landing extends Component {
@@ -240,7 +277,9 @@ class Landing extends Component {
             <div className="title">
               <h1>Jerome Lieow</h1>
               <hr style={{ borderBottom: "2px solid white" }} />
-              <p>Engineer with a love for Software</p>
+              <p>
+                Engineer with a love for <interests />
+              </p>
             </div>
           </div>
 
