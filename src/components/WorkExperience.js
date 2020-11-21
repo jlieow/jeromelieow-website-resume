@@ -129,7 +129,7 @@ class WorkExperience extends Component {
               "\n" +
               workExperience.location;
 
-            console.log("continue", workExperience.continue);
+            // console.log("continue", workExperience.continue);
 
             const continuation = workExperience.continuation ? "black" : "";
             const showEmployer = workExperience.employer ? "10px" : "";

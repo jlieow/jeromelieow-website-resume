@@ -56,10 +56,23 @@ const Styles = styled.div`
 `;
 
 class FloatingCircleNav extends Component {
+  constructor(props) {
+    super(props);
+    // console.log("offset", this.props.offset);
+    // console.log("topOffset", this.props.offset.topOffset);
+    // console.log("landingOffset", this.props.offset.landingOffset);
+    // console.log("profileOffset", this.props.offset.profileOffset);
+    // console.log("projectsOffset", this.props.offset.projectsOffset);
+    // console.log("skillsOffset", this.props.offset.skillsOffset);
+    // console.log("experienceOffset", this.props.offset.experienceOffset);
+    // console.log("contactOffset", this.props.offset.contactOffset);
+    // console.log("bottomOffset", this.props.offset.bottomOffset);
+  }
   state = {
     top: false,
     profile: false,
     projects: false,
+    skills: false,
     experience: false,
     contact: false,
   };
@@ -75,6 +88,7 @@ class FloatingCircleNav extends Component {
           top: state,
           profile: !state,
           projects: !state,
+          skills: !state,
           experience: !state,
           contact: !state,
         });
@@ -85,6 +99,7 @@ class FloatingCircleNav extends Component {
           top: state,
           profile: !state,
           projects: !state,
+          skills: !state,
           experience: !state,
           contact: !state,
         });
@@ -95,6 +110,7 @@ class FloatingCircleNav extends Component {
           top: !state,
           profile: state,
           projects: !state,
+          skills: !state,
           experience: !state,
           contact: !state,
         });
@@ -105,6 +121,18 @@ class FloatingCircleNav extends Component {
           top: !state,
           profile: !state,
           projects: state,
+          skills: !state,
+          experience: !state,
+          contact: !state,
+        });
+        break;
+
+      case "skills":
+        this.setState({
+          top: !state,
+          profile: !state,
+          projects: !state,
+          skills: state,
           experience: !state,
           contact: !state,
         });
@@ -115,6 +143,7 @@ class FloatingCircleNav extends Component {
           top: !state,
           profile: !state,
           projects: !state,
+          skills: !state,
           experience: state,
           contact: !state,
         });
@@ -125,6 +154,7 @@ class FloatingCircleNav extends Component {
           top: !state,
           profile: !state,
           projects: !state,
+          skills: !state,
           experience: !state,
           contact: state,
         });
@@ -135,6 +165,7 @@ class FloatingCircleNav extends Component {
           top: !state,
           profile: !state,
           projects: !state,
+          skills: !state,
           experience: !state,
           contact: state,
         });
@@ -162,6 +193,10 @@ class FloatingCircleNav extends Component {
         this.setState({ projects: state });
         break;
 
+      case "skills":
+        this.setState({ skills: state });
+        break;
+
       case "experience":
         this.setState({ experience: state });
         break;
@@ -187,6 +222,7 @@ class FloatingCircleNav extends Component {
               to="top"
               spy={true}
               smooth={true}
+              offset={this.props.offset.topOffset}
               duration={800}
               onSetActive={this.handleSetActive}
               // onSetInactive={this.handleSetInactive}
@@ -202,6 +238,7 @@ class FloatingCircleNav extends Component {
               to="landing"
               spy={true}
               smooth={true}
+              offset={this.props.offset.landingOffset}
               duration={300}
               onSetActive={this.handleSetActive}
               // onSetInactive={this.handleSetInactive}
@@ -210,7 +247,7 @@ class FloatingCircleNav extends Component {
               to="profile"
               spy={true}
               smooth={true}
-              offset={-295}
+              offset={this.props.offset.profileOffset}
               duration={800}
               onSetActive={this.handleSetActive}
               // onSetInactive={this.handleSetInactive}
@@ -226,7 +263,7 @@ class FloatingCircleNav extends Component {
               to="projects"
               spy={true}
               smooth={true}
-              offset={-300}
+              offset={this.props.offset.projectsOffset}
               duration={800}
               onSetActive={this.handleSetActive}
               // onSetInactive={this.handleSetInactive}
@@ -239,10 +276,26 @@ class FloatingCircleNav extends Component {
               />
             </Link>
             <Link
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={this.props.offset.skillsOffset}
+              duration={800}
+              onSetActive={this.handleSetActive}
+              // onSetInactive={this.handleSetInactive}
+            >
+              <li
+                style={{
+                  border: this.state.skills ? circleStyle : "",
+                  opacity: this.state.skills ? circleOpacity : 1,
+                }}
+              />
+            </Link>
+            <Link
               to="experience"
               spy={true}
               smooth={true}
-              offset={-5}
+              offset={this.props.offset.experienceOffset}
               duration={800}
               onSetActive={this.handleSetActive}
               // onSetInactive={this.handleSetInactive}
@@ -257,7 +310,7 @@ class FloatingCircleNav extends Component {
             <Link
               to="contact"
               spy={true}
-              offset={-800}
+              offset={this.props.offset.contactOffset}
               smooth={true}
               duration={300}
               onSetActive={this.handleSetActive}
@@ -267,6 +320,7 @@ class FloatingCircleNav extends Component {
               to="bottom"
               spy={true}
               smooth={true}
+              offset={this.props.offset.bottomOffset}
               duration={1400}
               onSetActive={this.handleSetActive}
               // onSetInactive={this.handleSetInactive}

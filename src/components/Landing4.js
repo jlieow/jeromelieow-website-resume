@@ -242,18 +242,22 @@ const Styles = styled.div`
       content: "Software"; 
     } 
     25% { 
-      content: "Travelling"; 
+      content: "Learning"; 
     } 
     50% { 
       content: "Investing"; 
     } 
     75% { 
-      content: "Learning"; 
+      content: "Travelling"; 
     } 
+    100% { 
+      content: "Software"; 
+    } 
+  }
 
   @-webkit-keyframes animate { 
     0% { 
-      content: "Travelling"; 
+      content: "Learning"; 
     } 
     25% { 
       content: "Software"; 
@@ -262,12 +266,28 @@ const Styles = styled.div`
       content: "Investing"; 
     } 
     75% { 
-      content: "Learning"; 
+      content: "Travelling"; 
+    } 
+    100% { 
+      content: "Software"; 
     } 
 } 
 `;
 
 class Landing extends Component {
+  constructor(props) {
+    super(props);
+    // console.log("offset", this.props.offset);
+    // console.log("topOffset", this.props.offset.topOffset);
+    // console.log("landingOffset", this.props.offset.landingOffset);
+    // console.log("profileOffset", this.props.offset.profileOffset);
+    // console.log("projectsOffset", this.props.offset.projectsOffset);
+    // console.log("skillsOffset", this.props.offset.skillsOffset);
+    // console.log("experienceOffset", this.props.offset.experienceOffset);
+    // console.log("contactOffset", this.props.offset.contactOffset);
+    // console.log("bottomOffset", this.props.offset.bottomOffset);
+  }
+
   render() {
     return (
       <Styles>
@@ -293,7 +313,7 @@ class Landing extends Component {
                 to="profile"
                 spy={true}
                 smooth={true}
-                offset={-295}
+                offset={this.props.offset.profileOffset}
                 duration={800}
               >
                 <div

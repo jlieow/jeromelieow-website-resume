@@ -118,6 +118,10 @@ const Styles = styled.div`
 `;
 
 class Experience extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     Aos.init({ duration: 2000 });
   }
@@ -130,42 +134,43 @@ class Experience extends Component {
     const offset = "230";
     return (
       <Styles>
-        <div
-          style={{
-            backgroundColor: "#FFE8D6",
-            paddingTop: "50px",
-            paddingBottom: "50px",
-            paddingLeft: "60px",
-            paddingRight: "60px",
-          }}
-        >
+        <div style={this.props.backgroundColor}>
           <div
-            className="avatar-row"
-            style={
-              {
-                // border: "1px solid black",
-              }
-            }
+            style={{
+              paddingTop: "50px",
+              paddingBottom: "50px",
+              paddingLeft: "60px",
+              paddingRight: "60px",
+            }}
           >
             <div
-              className="avatar-column-left"
-              data-aos="animateFadeLeftRight"
-              data-aos-offset={offset}
+              className="avatar-row"
+              style={
+                {
+                  // border: "1px solid black",
+                }
+              }
             >
-              <WorkExperience />
-            </div>
-            <div
-              className="avatar-column-right"
-              data-aos="animateFadeRightLeft"
-              data-aos-offset={offset}
-            >
-              <Education
-                school="School of Hard Knocks"
-                qualification="Knocking Hard"
-                startYear="1000"
-                endYear="2000"
-                description="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
-              />
+              <div
+                className="avatar-column-left"
+                data-aos="animateFadeLeftRight"
+                data-aos-offset={offset}
+              >
+                <WorkExperience />
+              </div>
+              <div
+                className="avatar-column-right"
+                data-aos="animateFadeRightLeft"
+                data-aos-offset={offset}
+              >
+                <Education
+                  school="School of Hard Knocks"
+                  qualification="Knocking Hard"
+                  startYear="1000"
+                  endYear="2000"
+                  description="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book."
+                />
+              </div>
             </div>
           </div>
         </div>

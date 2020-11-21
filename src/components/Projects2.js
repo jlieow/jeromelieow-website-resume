@@ -106,6 +106,10 @@ const Styles = styled.div`
 `;
 
 class Projects extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   state = {
     projects: [
       {
@@ -141,101 +145,101 @@ class Projects extends Component {
   render() {
     return (
       <Styles>
-        <div
-          style={{
-            width: "100%",
-            // backgroundColor: "#DDBEA9",
-            backgroundColor: "#fdfcfa",
-            // borderTop: "5px solid black",
-            // borderBottom: "5px solid black",
-            paddingTop: "50px",
-            paddingBottom: "50px",
-          }}
-        >
+        <div style={this.props.backgroundColor}>
           <div
-            data-aos="animateFadeInUp"
-            data-aos-offset="300"
-            style={
-              {
-                // border: "1px solid red",
-                // marginLeft: "75px",
-                // marginRight: "75px",
-              }
-            }
+            style={{
+              width: "100%",
+              // borderTop: "5px solid black",
+              // borderBottom: "5px solid black",
+              paddingTop: "50px",
+              paddingBottom: "50px",
+            }}
           >
             <div
-              style={{
-                textAlign: "center",
-                // padding: "10px",
-                // border: "1px solid black",
-              }}
+              data-aos="animateFadeInUp"
+              data-aos-offset="300"
+              style={
+                {
+                  // border: "1px solid red",
+                  // marginLeft: "75px",
+                  // marginRight: "75px",
+                }
+              }
             >
-              <h3>Projects</h3>
-            </div>
-            <div>
               <div
-                className="project-row"
                 style={{
+                  textAlign: "center",
+                  // padding: "10px",
                   // border: "1px solid black",
-                  marginLeft: "75px",
-                  marginRight: "75px",
                 }}
               >
-                {this.state.projects.map((project) => {
-                  return (
-                    <div
-                      key={project.projectTitle}
-                      style={{
-                        // border: "1px solid blue",
-                        display: "flex",
-                        alignItems: "center",
-                        // marginRight: "60px",
-                        // marginLeft: "60px",
-                      }}
-                    >
-                      <div className="column-img">
-                        <img
-                          src={project.img}
-                          alt=""
-                          // style={{ border: "1px solid black" }}
-                        />
-                      </div>
+                <h3>Projects</h3>
+              </div>
+              <div>
+                <div
+                  className="project-row"
+                  style={{
+                    // border: "1px solid black",
+                    marginLeft: "75px",
+                    marginRight: "75px",
+                  }}
+                >
+                  {this.state.projects.map((project) => {
+                    return (
                       <div
-                        className="column-details"
+                        key={project.projectTitle}
                         style={{
-                          // border: "1px solid red",
+                          // border: "1px solid blue",
                           display: "flex",
                           alignItems: "center",
+                          // marginRight: "60px",
+                          // marginLeft: "60px",
                         }}
                       >
+                        <div className="column-img">
+                          <img
+                            src={project.img}
+                            alt=""
+                            // style={{ border: "1px solid black" }}
+                          />
+                        </div>
                         <div
+                          className="column-details"
                           style={{
-                            // border: "1px solid black",
-                            width: "100%",
+                            // border: "1px solid red",
+                            display: "flex",
+                            alignItems: "center",
                           }}
                         >
-                          <h3>
-                            <span
-                              style={{
-                                borderBottom: "2px solid black",
-                              }}
-                            >
-                              {project.projectTitle}
-                            </span>
-                          </h3>
-                          <h6>{project.projectPeriod}</h6>
-                          <p>{project.description}</p>
-                          <p>
-                            <span>
-                              <b>Built with: </b>
-                            </span>
-                            {project.tools}
-                          </p>
+                          <div
+                            style={{
+                              // border: "1px solid black",
+                              width: "100%",
+                            }}
+                          >
+                            <h3>
+                              <span
+                                style={{
+                                  borderBottom: "2px solid black",
+                                }}
+                              >
+                                {project.projectTitle}
+                              </span>
+                            </h3>
+                            <h6>{project.projectPeriod}</h6>
+                            <p>{project.description}</p>
+                            <p>
+                              <span>
+                                <b>Built with: </b>
+                              </span>
+                              {project.tools}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>

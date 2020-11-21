@@ -11,21 +11,25 @@ const Styles = styled.div`
 `;
 
 class Profile extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <Styles>
-        <div align="center" className="wrapper">
-          <div
-            align="center"
-            style={{
-              postion: "absolute",
-              width: "100%",
-              minWidth: "0",
-              overflow: "hidden",
-              backgroundColor: "#FFE8D6",
-            }}
-          >
-            {/* <p
+        <div style={this.props.backgroundColor}>
+          <div align="center" className="wrapper">
+            <div
+              align="center"
+              style={{
+                postion: "absolute",
+                width: "100%",
+                minWidth: "0",
+                overflow: "hidden",
+              }}
+            >
+              {/* <p
               style={{
                 marginTop: "50px",
                 marginBottom: "0",
@@ -37,7 +41,8 @@ class Profile extends Component {
               "Alone we can do so little; together we can do so much." – Helen
               Keller
             </p> */}
-            <Avatar />
+              <Avatar />
+            </div>
           </div>
         </div>
       </Styles>

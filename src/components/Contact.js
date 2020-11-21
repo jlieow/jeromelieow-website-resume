@@ -18,6 +18,10 @@ const Styles = styled.div`
 `;
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   state = {
     contactDetails: [
       {
@@ -46,49 +50,49 @@ class Contact extends Component {
   render() {
     return (
       <Styles>
-        <div
-          style={{
-            // backgroundColor: "#DDBEA9",
-            backgroundColor: "#FDFCFA",
-            paddingTop: "25px",
-            paddingBottom: "10px",
-            paddingLeft: "60px",
-            paddingRight: "60px",
-          }}
-        >
-          <div align="center" style={{ postion: "relative" }}>
-            <h3>Jerome Lieow</h3>
-            <h6>You may connect with me on these platforms</h6>
-            <table>
-              <tbody>
-                <tr>
-                  {this.state.contactDetails.map((contactDetail) => {
-                    return (
-                      <td key={contactDetail.src} align="center">
-                        <a href={contactDetail.link}>
-                          <img
-                            className="contact-icon"
-                            src={contactDetail.src}
-                            style={{ margin: "10px" }}
-                            alt=""
-                          />
-                        </a>
-                      </td>
-                    );
-                  })}
-                </tr>
-              </tbody>
-            </table>
+        <div style={this.props.backgroundColor}>
+          <div
+            style={{
+              paddingTop: "25px",
+              paddingBottom: "10px",
+              paddingLeft: "60px",
+              paddingRight: "60px",
+            }}
+          >
+            <div align="center" style={{ postion: "relative" }}>
+              <h3>Jerome Lieow</h3>
+              <h6>You may connect with me on these platforms</h6>
+              <table>
+                <tbody>
+                  <tr>
+                    {this.state.contactDetails.map((contactDetail) => {
+                      return (
+                        <td key={contactDetail.src} align="center">
+                          <a href={contactDetail.link}>
+                            <img
+                              className="contact-icon"
+                              src={contactDetail.src}
+                              style={{ margin: "10px" }}
+                              alt=""
+                            />
+                          </a>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p style={{ margin: 0, paddingTOp: "20px", fontSize: "12px" }}>
+              <b>
+                Built with React, sourcecode available on{" "}
+                <a href="https://github.com/jlieow/jeromelieow-website-resume">
+                  GitHub
+                </a>
+                .
+              </b>
+            </p>
           </div>
-          <p style={{ margin: 0, paddingTOp: "20px", fontSize: "12px" }}>
-            <b>
-              Built with React, sourcecode available on{" "}
-              <a href="https://github.com/jlieow/jeromelieow-website-resume">
-                GitHub
-              </a>
-              .
-            </b>
-          </p>
         </div>
       </Styles>
     );
